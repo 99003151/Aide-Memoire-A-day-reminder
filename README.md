@@ -1,2 +1,2 @@
-# Aide-Memoire-A-day-reminder
+# Aide-Memoire: A-day-reminder
 Miniproject 
