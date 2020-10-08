@@ -41,10 +41,6 @@ void test_add(void) {
   CU_ASSERT(0 == Leap_Year(2021));
   CU_ASSERT(0 == Leap_Year(2026));
   CU_ASSERT(2 == Leap_Year(2010));
-  /* Dummy fail*/
-  CU_ASSERT(0 == Leap_Year(2028));
-  CU_ASSERT(2 == Leap_Year(2020));
-  CU_ASSERT(0 == Leap_Year(2010));
 }
 
 
