@@ -2,9 +2,9 @@ name: Valgrind
 
 on:
   push:
-    branches: [ Aiswarya ]
+    branches: [Aiswarya]
   pull_request:
-    branches: [ Aiswarya ]
+    branches: [Aiswarya]
 
 jobs:
   build:
