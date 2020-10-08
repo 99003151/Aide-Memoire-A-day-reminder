@@ -11,9 +11,9 @@
 
 /**
 *  adds the operand1 and operand2 and returns the result
-* @param[in] 
-* @return Result of operand1 + operand2
+* @param[in] l 
+* @return value of a
 */
-int add(int operand1, int operand2);
+int Leap_Year(int l);
 #endif
 
