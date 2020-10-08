@@ -1,5 +1,5 @@
 /** 
-* @file aide-memoire.h
+* @file aide_memoire.h
 * Leap year 
 */
 #ifndef __AIDE_MEMOIRE_H__
@@ -15,4 +15,5 @@
 * @return Result of operand1 + operand2
 */
 int add(int operand1, int operand2);
+#endif
 
