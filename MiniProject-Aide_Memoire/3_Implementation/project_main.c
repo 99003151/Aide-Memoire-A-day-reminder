@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<windows.h>
 
 struct event
 {
@@ -32,18 +33,6 @@ void month(struct event e)
         } 
         else b=100;   
 }
-int Leap_Year(int l)
-    {
-        int x=2;
-        if(l>=2020&& l<=2030)
-        {
-            if(l % 400==0) x=1;
-            else if(l % 100==0) x=0;
-            else if(l % 4==0) x=1;
-            else x=0;
-        }
-        return x;       
-}  
 void Month(int cc)
 {   
     if(cc==1||cc==3||cc==5||cc==7||cc==8||cc==10||cc==12) z=31;
@@ -79,7 +68,7 @@ void menu()
     printf("\n\n\t\t AIDE-MEMOIRE: A day reminder \n \t\t\t (2020-2030)");
     printf("\n\n\t Menu\n\n");
     printf("\t 1. Add New Event \n\t 2. List the events \n\t 3. Modify an event \n\t 4. Search for an event\n\t 5. Delete an event \n\t 6. Exit\n ");
-    switch(getch())
+    switch(getchar())
     {
         case '1': add_record();
         break;
@@ -97,7 +86,7 @@ void menu()
                 system("cls");
                 printf("\n\t Enter 1 to 6 only");
                 printf("\n\n\n\n\n\t Press any key");
-                getch();
+                getchar();
                 menu();
     }
 }
@@ -108,11 +97,11 @@ void got(char *name)
     char c,ch;
     do
     {
-        c=getch();
+        c=getchar();
         if(c!=8 && c!=13)
         {
             *(name+i)=c;
-            putch(c);
+            putchar(c);
             i++;
         }
         if(c==8)
@@ -123,7 +112,7 @@ void got(char *name)
             for(j=0;j<i;j++)
             {
                 ch=*(name+j);
-                putch(ch);
+                putchar(ch);
             }
         }
     }
@@ -155,7 +144,7 @@ void add_record()
         h=2;
         printf("\n\t Enter a valid year.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-        A1: switch(getch())
+        A1: switch(getchar())
             {
                 case '0': system("cls"); goto Year;
                 break;
@@ -175,7 +164,7 @@ void add_record()
         b=0;   
         printf("\n\t Enter a valid month.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-        A2: switch(getch())
+        A2: switch(getchar())
             {
                 case '0': system("cls"); goto Month;
                 break;
@@ -193,7 +182,7 @@ void add_record()
     {
         printf("\n\t Enter a valid day.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-        A3: switch(getch())
+        A3: switch(getchar())
             {
                 case '0': system("cls"); goto Day;
                 break;
@@ -212,7 +201,7 @@ void add_record()
         printf("\n\n\t Record Saved !");
 fclose(f);
 printf("\n\n\n\n\n\t Press any key");
-getch();
+getchar();
 system("cls");
 menu();
 }
@@ -235,7 +224,7 @@ void list_record()
     }
     fclose(f);
     printf("\n\n\n\n\n\t Press any key");
-    getch();
+    getchar();
     system("cls");
     menu();
 }
@@ -272,7 +261,7 @@ void modify_record()
                     g=2;
                     printf("\n\t Enter a valid year.");
                     printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-                    M1: switch(getch())
+                    M1: switch(getchar())
                     {
                         case '0': system("cls"); goto YR;
                         break;
@@ -292,7 +281,7 @@ void modify_record()
                     b=0;   
                     printf("\n\t Enter a valid month.");
                     printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-                    M2: switch(getch())
+                    M2: switch(getchar())
                     {
                         case '0': system("cls"); goto MH;
                         break;
@@ -310,7 +299,7 @@ void modify_record()
                 {
                     printf("\n\t Enter a valid day.");
                     printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' to exit ");
-                    M3: switch(getch())
+                    M3: switch(getchar())
                     {
                         case '0': system("cls"); goto DY;
                         break;
@@ -338,7 +327,7 @@ void modify_record()
     fclose(f);
     }
     printf("\n\n\n\n\n\t Press any key");
-    getch();
+    getchar();
     system("cls");
     menu();       
 }
@@ -386,7 +375,7 @@ void delete_record()
         }        
     }
     printf("\n\n\n\n\n\t Press any key");
-    getch();
+    getchar();
     system("cls");
     menu();
 }
@@ -412,7 +401,7 @@ void search_record()
         s=2;
         printf("\n\t Enter a valid year.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' to exit ");
-        S1: switch(getch())
+        S1: switch(getchar())
             {
                 case '0': system("cls"); goto YEAR;
                 break;
@@ -432,7 +421,7 @@ void search_record()
         z=1;
         printf("\n\t Enter a valid month.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-        S2: switch(getch())
+        S2: switch(getchar())
         {
             case '0': system("cls"); goto MONTH;
             break;
@@ -450,7 +439,7 @@ void search_record()
     {
         printf("\n\t Enter a valid day.");
         printf("\n\n\n\n\n\t Press '0' to continue\n\t Press '1' for menu ");
-        S3: switch(getch())
+        S3: switch(getchar())
             {
                 case '0': system("cls"); goto DAY;
                 break;
@@ -483,7 +472,10 @@ void search_record()
         printf("\n\n\n\n\t No records.");
     else p=0;
     printf("\n\n\n\n\n\t Press any key");
-    getch();
+    getchar();
     menu();
 }
 //////////////////////////////////////////////////////////
+
+            
+             
