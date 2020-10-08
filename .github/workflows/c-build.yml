@@ -1,9 +1,10 @@
 name: C/C++ CI
+
 on:
   push:
-    branches: [ Aiswarya ]
+    branches: [ master ]
   pull_request:
-    branches: [ Aiswarya ]
+    branches: [ master ]
 
 jobs:
   build:
