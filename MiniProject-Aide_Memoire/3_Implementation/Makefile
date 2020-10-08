@@ -20,7 +20,7 @@ INC	= -Iinc
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 # Document files
-DOCUMENTATION_OUTPUT = documentation/html
+DOCUMENTATION_OUTPUT = Documentation/html
 
 # Default target built
 $(PROJECT_NAME):all
@@ -37,7 +37,7 @@ run:$(PROJECT_NAME)
 
 # Document the code using Doxygen
 doc:
-	make -C ./documentation
+	make -C ./Documentation
 
 # Build and run the unit tests
 test:$(BUILD)
