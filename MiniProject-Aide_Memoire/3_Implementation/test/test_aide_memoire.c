@@ -35,7 +35,7 @@ int main() {
 }
 
 /* Write all the test functions */ 
-void test_add(void) {
+void test_Leap_Year(void) {
   CU_ASSERT(1 == Leap_Year(2020));
   CU_ASSERT(1 == Leap_Year(2024));
   CU_ASSERT(0 == Leap_Year(2021));
@@ -45,5 +45,8 @@ void test_add(void) {
 
 
   
+ 
+
+
  
 
