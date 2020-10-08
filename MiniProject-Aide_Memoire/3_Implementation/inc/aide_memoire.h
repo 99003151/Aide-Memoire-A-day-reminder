@@ -2,8 +2,8 @@
 * @file aide-memoire.h
 * Leap year 
 */
-#ifndef __AIDE-MEMOIRE_H__
-#define __AIDE-MEMOIRE_H__
+#ifndef __AIDE_MEMOIRE_H__
+#define __AIDE_MEMOIRE_H__
 
 #include <stdio.h>
 #include <stdlib.h>
