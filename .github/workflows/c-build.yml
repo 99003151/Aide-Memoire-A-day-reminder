@@ -15,4 +15,4 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: make all
-      run:  make all -C MiniProject_Aide-Memoire/3_Implementation/
+      run:  make all -C MiniProject-Aide_Memoire/3_Implementation/
