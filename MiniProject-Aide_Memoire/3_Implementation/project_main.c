@@ -7,8 +7,10 @@ struct event
     int date[3];
     char eve[50];    
 };
+
 int a=2,b=0;
 int z=0;
+
 int leap_year (struct event m)
 {
     a=2;
